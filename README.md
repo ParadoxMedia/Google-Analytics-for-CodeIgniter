@@ -24,10 +24,28 @@ Errors/issues where im working on / struggeling with, and where you can assist m
 * Chain looping in some browsers for token request
 
 
-Parameters
+Installation & How To
 ------------------------
 
-Available parameters for writing queries to the Google API
+Signup for the API here: https://code.google.com/apis/console
+Generate the following keys:
+
+* ga_appname	    is the name of your app, used for authenticaion
+* ga_clientid 	    is the id of the client
+* ga_clientsecret	is the secret key of your app auth
+* ga_redirect_uri  	is the redirect_uri of the app auth || blank for default
+* ga_devkey			is the developer key used for the API
+* ga_projectid		is the project ID of the current GA Acc
+
+Note: project id can be difficult to find, if that is your case checkout this img:
+http://enarion.net/wp-content/uploads/2012/03/01_analytics_url.png
+Big thanks to the guys at Enarion for that.
+
+
+Parameters (NOT IMPLENTED YET)
+------------------------
+
+Available parameters for writing queries to the Google API. Soon available.
 
 * $start 	=> Start day from where it should pull it's from (STRING w/ date())
 * $end	 	=> Day where it should stop pulling data. (STRING w/ date())

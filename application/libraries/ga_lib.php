@@ -43,6 +43,7 @@ Class Ga_lib
         $this->setCode();
         $this->setToken();
         $this->getToken();
+        //$this->refresh_token();
     }
 
     public function getData($start_date, $end_date, $metrics)
@@ -98,7 +99,7 @@ Class Ga_lib
     {
         $num_days = cal_days_in_month(CAL_GREGORIAN, date('m'), date('Y'));
         $month = date('m');
-        $year = date('y');
+        $year = date('Y');
         $date_info = array(
             'days'  => $num_days,
             'months'=> $month,
@@ -145,5 +146,6 @@ Class Ga_lib
     public function refresh_token()
     {
         // Feature that has to be created if the error still exist
+        $this->client->refreshToken($this->refresh_token);
     }
 }

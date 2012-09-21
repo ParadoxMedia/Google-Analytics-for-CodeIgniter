@@ -35,11 +35,7 @@ Class Ga_lib
         // $service implements the client interface, has to be set before auth call
         $this->service = new apiAnalyticsService($this->client);
 
-        if (isset($_GET['logout'])) { // logout: destroy token
-            unset($_SESSION['token']);
-            die('Logged out.');
-        }
-
+        // This order must be preserved in order to work!
         $this->setCode();
         $this->setToken();
         $this->getToken();
@@ -74,7 +70,7 @@ Class Ga_lib
         $dimensions = 'ga:date,ga:year,ga:month,ga:day';
         $data = $this->service->data_ga->get('ga:'.$this->projectId, $first, $last, $metrics, array('dimensions' => $dimensions));
 
-        // Catch GA Data and push them in an array -> SLACKER GOOOGEL
+        // Catch GA Data and push them in an array -> SLACKER GOOGLE
         $dataRow = array();
         foreach($data['rows'] as $row) {
             $rowArray = array();
@@ -83,7 +79,6 @@ Class Ga_lib
             }
             array_push($dataRow, $rowArray);
         }
-
         return $dataRow;
     }
 

@@ -1,4 +1,4 @@
-Google-Analytics-for-CodeIgniter
+Google Analytics for CodeIgniter
 ================================
 
 Google Analytics Dashboard Module for CodeIgniter (BETA)
@@ -50,3 +50,8 @@ Available parameters for writing queries to the Google API. Soon available.
 * $start 	=> Start day from where it should pull it's from (STRING w/ date())
 * $end	 	=> Day where it should stop pulling data. (STRING w/ date())
 * $metrics	=> Parameters of selecting the data. e.g. ga:visits or ga:pageviews (STRING)
+
+A small note
+------------------------
+
+This is my first 'real' GitHub project, so please be gentle. I'm just a junior programmer. I thought it would be fun to start creating some project on GitHub and see where it ends.
